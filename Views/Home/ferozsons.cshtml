@@ -1,0 +1,216 @@
+﻿@model IEnumerable<pharmacy_management.Models.ferozson>
+
+@{
+    ViewBag.Title = "ferozsons";
+}
+
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="~/Content/Site.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+
+
+    <div class="container-fluid" style="border: 3px solid #808080">
+        <div class="row">
+            <img src="~/Content/ferozsons.png" alt="gsk" class="img-fluid" style="width: 100%;height: 500px;">
+        </div>
+    </div>
+    <br><br><br>
+    <div style="border-bottom:1px solid #6d6d6d"></div>
+    <br /><br />
+
+
+    <h1 class="hd_style" style="color:#148187">Our Medicine</h1>
+
+    <br /><br /><br />
+
+
+    <script type="text/javascript">
+
+        function add_validate() {
+
+            if (document.add_form.trademark.value == "") {
+                alert("Please provide trademark!");
+                document.add_form.trademark.focus();
+                return false;
+            }
+            if (document.add_form.generic.value == "") {
+                alert("Please provide generic!");
+                document.add_form.generic.focus();
+                return false;
+            }
+            if (document.add_form.cure.value == "") {
+
+                alert("Please provide cure!");
+                document.add_form.cure.focus();
+                return false;
+            }
+            if (document.add_form.potency.value == "") {
+                alert("Please provide potency!");
+                document.add_form.potency.focus();
+                return false;
+            }
+            return (true);
+        }
+
+
+        function search_validate() {
+
+            if (document.search_form.search.value == "") {
+                alert("Please provide trademark for search!");
+                document.search_form.search.focus();
+                return false;
+            }
+
+            return (true);
+        }
+
+        function edit_validate() {
+
+            if (document.edit_form.edit.value == "") {
+                alert("Please provide trademark to edit!");
+                document.edit_form.edit.focus();
+                return false;
+            }
+
+            return (true);
+        }
+
+    </script>
+
+    
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+
+                <th scope="col" class="tb_style" style="color:#148187;">Trademark</th>
+                <th scope="col" class="tb_style" style="color:#148187;">Generic</th>
+                <th scope="col" class="tb_style" style="color:#148187;">Cure</th>
+                <th scope="col" class="tb_style" style="color:#148187;">Potency</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var e in Model)
+            {
+                <tr>
+
+                    <td class="tb_style" style="background:linear-gradient(to right, #148187 10%, #16959c 90%);color:#ffffff;">@e.trademark</td>
+                    <td class="tb_style">@e.generic</td>
+                    <td class="tb_style">@e.cure</td>
+                    <td class="tb_style">@e.potency</td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+
+
+    <br /><br /><br />
+    <div style="border-bottom:1px solid #6d6d6d"></div>
+    <br /><br /><br />
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md">
+                    <h1 class="hd_style" style="color:#148187;">You can add item here</h1>
+                </div>
+            </div>
+            <br /><br />
+            <div class="row">
+                <div class="form-style mx-auto" style="border:2px solid #1e5d9a;height:500px;width:400px;">
+                    >
+                    <form action="Add_Ferozsons" name="add_form" method="post" style="margin-top:30px;margin-left:20px;" onsubmit="return add_validate()">
+                        <div class="form-group">
+                            <label for="trademaek">Trademark:</label><br>
+                            <input type="text" class="form-control" id="trademark" name="trademark" placeholder="Trademark"><br>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="generic">Generic:</label><br>
+                            <input type="text" class="form-control" id="generic" name="generic" placeholder="Generic"><br>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="cure">Cure:</label><br>
+                            <input type="text" class="form-control" id="cure" name="cure" placeholder="Cure"><br>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="potency">Potency:</label><br>
+                            <input type="text" class="form-control" id="potency" name="potency" placeholder="Potency"><br><br>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Add</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br /><br /><br />
+    <div style="border-bottom:1px solid #6d6d6d"></div>
+    <br /><br /><br />
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md">
+                    <h1 class="hd_style" style="color:#148187;">Search item here</h1>
+                </div>
+            </div>
+            <br /><br />
+            <div class="row">
+                <div class="mx-auto" style="border:2px solid #09943f;height:200px;width:400px;">
+                    <form action="Search_Ferozsons" name="search_form" method="post" style="margin-top:30px;margin-left:20px;" onsubmit="return search_validate()">
+                        <div class="form-group">
+                            <label for="search">Enter trademark Here:</label><br>
+                            <input type="text" class="form-control" id="search" name="search" placeholder="Trademark" style="width:100%;"><br>
+                        </div>
+                        <div class="input-group-append">
+                            <button class="btn btn-success" type="submit"><i class="fa fa-search" style="display:inline;"></i></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br /><br /><br />
+    <div style="border-bottom:1px solid #6d6d6d"></div>
+    <br /><br /><br />
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md">
+                    <h1 class="hd_style" style="color:#148187;">You can edit an item</h1>
+                </div>
+            </div>
+            <br /><br />
+            <div class="row">
+                <div class="mx-auto" style="border:2px solid #a40c0c;height:200px;width:400px;">
+                    <form action="Edit_Ferozson" name="edit_form" method="post" style="margin-top:30px;margin-left:20px;" onsubmit="return edit_validate()">
+                        <div class="form-group">
+                            <label for="edit">Enter trademark Here:</label><br>
+                            <input type="text" class="form-control" id="edit" name="edit" placeholder="Trademark"><br>
+                        </div>
+                        <div class="input-group-append">
+                            <button class="btn btn-danger" type="submit">Edit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
+

@@ -1,0 +1,80 @@
+﻿@model pharmacy_management.Models.gsk
+
+@{
+    ViewBag.Title = "Edit_Gsk";
+}
+
+
+<script type="text/javascript">
+    function validate() {
+
+        if (document.add_form.trademark.value == "") {
+            alert("Please provide trademark!");
+            document.add_form.trademark.focus();
+            return false;
+        }
+        if (document.add_form.generic.value == "") {
+            alert("Please provide generic!");
+            document.add_form.generic.focus();
+            return false;
+        }
+        if (document.add_form.cure.value == "") {
+
+            alert("Please provide cure!");
+            document.add_form.cure.focus();
+            return false;
+        }
+        if (document.add_form.potency.value == "") {
+            alert("Please provide potency!");
+            document.add_form.potency.focus();
+            return false;
+        }
+        return (true);
+    }
+</script>
+
+
+<section>
+    <div class="container">
+
+       
+
+        <div class="row">
+            <div class="col-md">
+                <h1 class="hd_style" style="color:#ba7e23">Enter new values to edit</h1>
+
+            </div>
+        </div>
+        <br /><br />
+        <div class="row">
+            <div class="col-md">
+                <form action="Edit_val_Gsk" name="add_form" method="post" onsubmit="return validate()">
+                    
+                    <br /><br />
+                    <div class="form-group">
+                        <label for="trademaek">Trademark:</label><br>
+                        <input type="text" class="form-control" id="trademark" name="trademark" value="@Model.trademark"><br>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="generic">Generic:</label><br>
+                        <input type="text" class="form-control" id="generic" name="generic" placeholder="Generic"><br>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cure">Cure:</label><br>
+                        <input type="text" class="form-control" id="cure" name="cure" placeholder="Cure"><br>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="potency">Potency:</label><br>
+                        <input type="text" class="form-control" id="potency" name="potency" placeholder="Potency"><br><br>
+                    </div>
+
+                    <button type="submit" class="btn btn-danger">Edit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+

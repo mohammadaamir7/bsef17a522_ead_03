@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="GSK">
+  <DataContextMoniker Name="/GSKDataContext" />
+  <nestedChildShapes>
+    <classShape Id="4bd9b173-a329-4448-ba3e-1fc16d92f9b6" absoluteBounds="1.625, 0.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/GSKDataContext/gsk" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9b5a4281-fc73-43f3-a950-91d3e6cd420f" absoluteBounds="1.6400000000000001, 1.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

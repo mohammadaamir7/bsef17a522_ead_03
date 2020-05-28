@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Getz">
+  <DataContextMoniker Name="/GetzDataContext" />
+  <nestedChildShapes>
+    <classShape Id="aba5ad94-e5e8-47de-911b-a462876e65e4" absoluteBounds="1.875, 1, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/GetzDataContext/getz" />
+      <nestedChildShapes>
+        <elementListCompartment Id="559feb8a-0522-491a-adbe-4411bc5cc28f" absoluteBounds="1.8899999999999997, 1.46, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

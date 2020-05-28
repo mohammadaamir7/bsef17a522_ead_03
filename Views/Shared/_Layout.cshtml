@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="~/Content/Site.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+
+
+    
+    <nav class="navbar navbar-expand-md navbar-light navbar-fixed-top" style="border-bottom:2px solid #635959;opacity:0.8;background-color:#f1f1f1;">
+        
+        <p class="navbar-brand nav-logo-style" style="color: #3572d4;">Cure+</p>
+       
+
+        
+        <ul class="navbar-nav ml-auto menu-style">
+            <li class="nav-item" style="margin-left:30px;margin-bottom:20px;">
+                @Html.ActionLink("Home", "Index", "Home")
+            </li>
+            <li class="nav-item" style="margin-left:30px;">
+                @Html.ActionLink("GSK", "gsk", "Home")
+            </li>
+            <li class="nav-item" style="margin-left:30px;">
+                @Html.ActionLink("GETZ", "getz", "Home")
+            </li>
+            <li class="nav-item" style="margin-left:30px;">
+                @Html.ActionLink("Sami Pharma", "sami_pharma", "Home")
+            </li>
+            <li class="nav-item" style="margin-left:30px;">
+                @Html.ActionLink("Hilton", "hilton", "Home")
+            </li>
+            <li class="nav-item" style="margin-right:40px;margin-left:30px;">
+                @Html.ActionLink("Ferozsons", "ferozsons", "Home")
+            </li>
+
+        </ul>
+            
+        
+    </nav>
+
+
+    <div class="container body-content">
+
+
+
+        @RenderBody()
+        <hr />
+        <footer style="background-image:linear-gradient(to right, #117e80 10%, #0ea8ab 90%);width:100%;height:auto;border-top:10px solid #000000;">
+            <div class="container">
+                <br />
+                <div class="row">
+                    <span class="span-style mx-auto" style="">Services</span>
+                </div>
+                <br /><br /><br />
+
+                <div class="row">
+                    <p class="navbar-brand nav-logo-style mx-auto" style="color: #ffffff;padding:0;">Cure+</p>
+                </div>
+
+                <div style="border-bottom:1px solid #ffffff;margin-right:5px;"></div>
+                <br />
+                <div class="mx-auto" style="border-bottom:1px solid #ffffff;width:500px"></div>
+                <br /><br />
+                <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-3">
+                        <h1 class="foot-head">Companies :</h1>
+                        <br />
+                        <ul>
+                            <li class="foot-p">GSK</li>
+                            <li class="foot-p">GETZ</li>
+                            <li class="foot-p">Hilton Pharma</li>
+                            <li class="foot-p">Sami Pharma</li>
+                            <li class="foot-p">Ferozsons</li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-3">
+                        <h1 class="foot-head">Contact Us :</h1>
+                        <br />
+                        <p class="foot-p"><i class="fa fa-facebook-official" style="font-size:24px;margin-right:10px;padding-top:3px;"></i>Facebook</p>
+                        <p class="foot-p"><i class="fa fa-youtube-play" style="font-size:24px;margin-right:10px;"></i>Youtube</p>
+                        <p class="foot-p"><i class="fa fa-instagram" style="font-size:24px;margin-right:10px;"></i>Instagram</p>
+                        <p class="foot-p"><i class="fa fa-google-plus-official" style="font-size:24px;margin-right:10px;"></i>Gmail</p>
+                        <p class="foot-p"><i class="fa fa-whatsapp" style="font-size:24px;margin-right:10px;"></i>Whatsapp</p>
+
+                    </div>
+
+                    <div class="col-md-5">
+                        <h1 class="foot-head">Help & Support :</h1>
+                        <br />
+                        <ul>
+                            <li class="foot-p">Can find best cure</li>
+                            <li class="foot-p">Find suitable medicine</li>
+                            <li class="foot-p">Check potency that is suitable</li>
+                            <li class="foot-p">Search medicine by company</li>
+                            <li class="foot-p">Select best medicine for yourself</li>
+                        </ul>
+                    </div>
+
+                </div>
+                <br /><br /><br />
+                <div class="row" style="background-color:#000000;width:100%;">
+                    <p class="foot-p mx-auto" style="font-size:120%;padding-top:10px;">&copy; Pharmacy Managemet System</p>
+                </div>
+            </div>
+            
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
