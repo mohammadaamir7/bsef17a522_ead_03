@@ -1,1 +1,1 @@
-# bsef17a522_ead_03
+This website is about pharmaceutical companies. You can search different types of medicines of a specific company for different disseases.You can add new medicines of your choice in any company.you can edit any medicine of any type in any company.There is display functionality where you can look and find any medicine of your choice from any company.
